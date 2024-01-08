@@ -1,0 +1,525 @@
+
+:root {
+    --color-principal:#007193;
+  }
+
+
+body{
+    background-color:white;
+ 
+
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:' template templatedois';
+    
+}
+
+.imagem-coracao{
+    width: 15px;
+    animation: anima infinite 2s ;
+}
+
+@keyframes anima {
+    from{
+        width: 15px;
+    }
+    50%{
+        width: 25px;
+    }
+        to{
+            width: 15px;
+        }
+
+   
+}
+
+.fundo{
+   grid-area: template;      /*com isso o header ficará sempre com o tamanho da tela */
+  height: 100%;
+  width: 100%;
+  /*background geralmente uso o modo compacto, mas aqui vou colocar separadamente para explicar cada parte*/
+  /* aqui defino a imagem maior*/
+  background-image: url("static/imagem/background-doacao.webp");
+  /*deixa o background com efeito paralax*/
+  background-attachment: fixed;
+  /* cover é para nunca deixar espaço sem imagem*/
+  background-size: cover;
+  
+}
+
+
+.container-dois{
+    grid-area: templatedois;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--color-principal);
+}
+.container-p{
+    
+    width: 300px;
+    padding-top: 10px;
+}
+p{
+   
+    color: white; 
+    font-style: italic;
+    font-size: 20px;
+    margin: 10px 0 0 10px;
+ 
+    overflow: hidden;
+    width: 100%;
+   /* animation: type 4s steps(60, end); */
+}
+p:nth-child(2){
+    animation: type2 8s steps(60, end);
+  }
+  span{
+    animation: blink 1s infinite;
+  }
+
+@keyframes type{ 
+    from { width: 0; } 
+  } 
+  @keyframes type2{
+    0%{width: 0;}
+    50%{width: 0;}
+    100%{ width: 100; } 
+  } 
+  @keyframes blink{
+    to{opacity: .0;}
+  }
+  
+nav{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ 
+ 
+}
+li{
+    list-style: none;
+    padding: 10px;
+    background-color: var(--color-principal);
+    color: white;
+}
+li:hover{
+    list-style: none;
+    padding: 10px;
+    background-color:#3b98a8 ;
+    color: white;
+    cursor: pointer;
+}
+li:first-child{
+    border-radius: 10px 0px 0px 0px;
+}
+li:last-child{
+
+    border-radius:0px  10px 0px 0px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+button{
+    
+    position: absolute;
+     top: 50%;
+     left: 50%;
+
+}
+.container{
+    border-radius: 10px 0px 0px 10px;
+    border: 2px solid var(--color-principal);
+}
+
+footer{
+    background-color:var(--color-principal) ;
+    width: 100%;
+    height: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.site{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+.site:hover{
+    background-color: #9ebbc0;
+    color: var(--color-principal);
+    border: 2px solid var(--color-principal);
+    border-radius: 5px;
+
+}
+
+h1{
+    text-align: center;
+    color:  var(--color-principal);
+}
+section{
+    background-color: rgb(87, 172, 87);
+    padding-bottom: 20px;
+ 
+}
+
+.conteinerCard{
+padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #d1f2f8;
+
+  
+}
+.curved{
+  
+  display: block;
+    
+ 
+}
+.cardUm{
+
+    opacity: 0.5;
+    width: 200px;
+    height: 300px;
+    background-color:var(--color-principal) ;
+    margin: 10px;
+    border-radius: 10px;
+    background-image: url(../imagem/sangue-fundo.webp);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition-duration:2s;
+    transform-origin: 0% 0%;
+    border:2px solid var(--color-principal);
+    
+ 
+    
+    
+   
+}
+.cardUm:hover{
+    width: 30%;
+    height: 300px;
+    opacity: 1;
+}
+
+.cardDois{
+    opacity: 0.5;
+    width: 200px;
+    height: 300px;
+    background-color:var(--color-principal) ;
+    margin: 10px;
+    border-radius: 10px;
+    background-image: url(../imagem/doacao-cabelo.webp);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transform-origin: 0% 0%;
+    transition-duration:2s;
+    border:2px solid var(--color-principal)  ;
+ 
+    
+    
+   
+}
+.cardDois:hover{
+    width: 30%;
+    height: 300px;
+    opacity: 1;
+}
+
+.cardTres{
+    opacity: 0.5;
+    width: 200px;
+    height: 300px;
+    background-color:var(--color-principal);
+    background-image: url(../imagem/base-missionario.webp);
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transform-origin: 0% 0%;
+    transition-duration:2s;
+    border:2px solid var(--color-principal) ;
+ 
+    
+    
+   
+}
+.cardTres:hover{
+    width: 30%;
+    height: 300px;
+    opacity: 1;
+}
+.titulo{
+ position: relative;
+ margin: 0px;
+ top: 84%;
+ background-color: var(--color-principal) ;
+ width: 100%;
+ height: 30px;
+ border-radius: 0px 0px 10px 10px;
+}
+.h3-titulo{
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+  
+}
+
+.titulo-dois{
+    position: relative;
+
+    top: 84%;
+    background-color: var(--color-principal);
+ 
+    height: 30px;
+    border-radius: 0px 0px 10px 10px;
+ 
+   }
+   .h3-titulo-dois{
+    
+      text-align: center;
+       color: white;
+     
+   }
+
+   
+.titulo-tres{
+    position: relative;
+   
+    top: 84%;
+    background-color: var(--color-principal);
+ 
+    height: 30px;
+    border-radius: 0px 0px 10px 10px;
+ 
+   }
+   .h3-titulo-tres{
+       
+      text-align: center;
+       color: white;
+     
+   }
+.borboleta{
+    
+    top: 400px;
+    width: 40px;
+    position: relative;
+    animation: borboleta 50s infinite;
+}
+
+
+@keyframes borboleta{
+    from{
+     transform: translateX(100px);
+    }
+    50%{
+        transform: translateX(900px);
+        top: 200px;
+    }
+
+    75%{
+        top:30px;
+    }
+    90%{
+        transform: scaleX(-1); 
+    }
+    to{
+        top: 400px;
+        transform: scaleX(-1);
+        transform: translateX(100px);
+    }
+}
+
+
+   /*
+
+@keyframes ????? {
+
+    from{
+   
+
+    }
+    20%{
+    
+    100%{
+    
+    }
+
+}
+*/
+
+
+
+      /*Para celular */
+
+
+
+@media screen and (max-width: 792px) {
+    body{
+        background-color:white;
+    } 
+
+
+.grid{
+    display: block;
+
+}
+.container-dois{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30px;
+ 
+    background-color: var(--color-principal);
+}
+
+.conteinerCard{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30px;
+ 
+       
+ 
+}
+.cardUm{
+    display: block;
+     opacity: 1;
+    width: 96%;
+
+ 
+ 
+    
+    
+   
+}
+.cardUm:hover{
+    display: block;
+    width: 96%;
+    height: 300px;
+    opacity: 1;
+}
+
+.cardDois{
+    display: block;
+    opacity: 1;
+    width: 96%;
+   
+   
+}
+.cardDois:hover{
+
+    display: block;
+    width: 96%;
+    height: 300px;
+    opacity: 1;
+}
+
+.cardTres{
+    display: block;
+    opacity: 1;
+    width: 96%;
+    height: 300px;
+ 
+
+    
+   
+}
+.cardTres:hover{
+
+    display: block;
+    width: 96%;
+    height: 300px;
+   
+}
+.titulo{
+
+ background-color: var(--color-principal) ;
+ width: 100%;
+ height: 30px;
+ border-radius: 0px 0px 10px 10px;
+}
+.h3-titulo{
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+  
+}
+
+.titulo-dois{
+ 
+    background-color: var(--color-principal);
+ 
+    height: 30px;
+    border-radius: 0px 0px 10px 10px;
+ 
+   }
+   .h3-titulo-dois{
+    
+      text-align: center;
+       color: white;
+     
+   }
+
+   
+.titulo-tres{
+  
+    background-color: var(--color-principal);
+ 
+    height: 30px;
+    border-radius: 0px 0px 10px 10px;
+ 
+   }
+   .h3-titulo-tres{
+       
+      text-align: center;
+       color: white;
+     
+   }
+   @keyframes borboleta{
+    from{
+     transform: translateX(100px);
+    }
+    50%{
+        transform: translateX(400px);
+        top: 200px;
+    }
+
+    75%{
+        top:30px;
+    }
+    90%{
+        transform: scaleX(-1); 
+    }
+    to{
+        top: 400px;
+        transform: scaleX(-1);
+        transform: translateX(100px);
+    }
+}
+}
+
